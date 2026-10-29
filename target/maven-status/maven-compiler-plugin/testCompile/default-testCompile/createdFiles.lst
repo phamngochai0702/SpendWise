@@ -1,0 +1,10 @@
+com\spendwise\repository\RepositoryCrudAndFilterTest.class
+com\spendwise\service\ReportAndExportTest.class
+com\spendwise\repository\PersistenceTest.class
+com\spendwise\service\AuthServiceTest.class
+com\spendwise\util\PasswordHasherTest.class
+com\spendwise\service\BudgetServiceTest.class
+com\spendwise\service\CategoryServiceTest.class
+com\spendwise\util\MoneyUtilTest.class
+com\spendwise\util\DateUtilTest.class
+com\spendwise\service\MonthlyBudgetServiceTest.class
