@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- Target Java 21 bytecode as required; the build machine compiles with JDK 26. -->
     <maven.compiler.release>21</maven.compiler.release>
+    <spendwise.build.directory>${project.basedir}/target</spendwise.build.directory>
   </properties>
 
   <dependencies>
@@ -43,6 +44,7 @@
   </dependencies>
 
   <build>
+    <directory>${spendwise.build.directory}</directory>
     <finalName>spendwise</finalName>
     <plugins>
       <plugin>

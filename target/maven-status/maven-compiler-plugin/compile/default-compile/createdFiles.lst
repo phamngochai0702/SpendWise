@@ -1,5 +1,6 @@
 com\spendwise\model\TimePoint.class
 com\spendwise\service\CategoryService.class
+com\spendwise\ui\dialogs\MonthlyBudgetDialog$1.class
 com\spendwise\ui\screens\DashboardPanel.class
 com\spendwise\util\DateUtil.class
 com\spendwise\util\Theme.class

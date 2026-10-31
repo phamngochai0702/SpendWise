@@ -87,6 +87,8 @@ SpendWise-New/
 
 - **JDK 21** or newer (the build machine used JDK 26 with `--release 21`)
 - **Maven 3.9+** (only needed to build; the produced JAR runs with a normal `java`)
+- To create a standalone Windows x64 app, the build computer also needs JDK 21+ with
+  `jpackage`; the receiving computer does not need Java or Maven.
 - First Maven build downloads `sqlite-jdbc` and `flatlaf` from Maven Central; everything
   else afterwards works fully offline.
 
@@ -106,6 +108,21 @@ java -jar target/spendwise.jar
 **From an IDE (IntelliJ IDEA / VS Code):** open this folder as a Maven project and simply run
 `com.spendwise.Main` — the database is created automatically and the main window opens; no
 other class or process has to be started first.
+
+## Create a standalone Windows app
+
+On a Windows x64 build computer with JDK 21+ (including `jpackage`) and Maven 3.9+, run:
+
+```powershell
+.\package-windows.ps1
+```
+
+The script runs the Maven build and creates `dist\SpendWise`, an app image containing the
+application, its Java runtime, and the SpendWise icon. Send the **entire `dist\SpendWise`
+folder** (or a ZIP of that folder), not just `SpendWise.exe`. The receiving Windows x64
+computer can then launch `SpendWise.exe` without installing Java, Maven, or other application
+dependencies. This package is Windows-specific; macOS and Linux need separate packages built
+on their target platforms.
 
 **Custom database location:**
 
